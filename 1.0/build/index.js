@@ -138,13 +138,13 @@ KISSY.add('gallery/galleria/1.0/index',function (S,Base,Node,Slide) {
 			_this.showItem.push(item);
 			D.append(item,_this.container);
 			E.on(item,"mouseenter",function(e){
-				tar = e.currentTarget;
+				var tar = e.currentTarget;
 				if(D.hasClass(tar,"ss-small-pic")){
 					D.addClass(tar,"ss-hover");
 				}
 			});
 			E.on(item,"mouseleave",function(e){
-				tar = e.currentTarget;
+				var tar = e.currentTarget;
 				if(D.hasClass(tar,"ss-small-pic")){
 					D.removeClass(tar,"ss-hover");
 				}
@@ -593,7 +593,7 @@ KISSY.add('gallery/galleria/1.0/index',function (S,Base,Node,Slide) {
     		areaHeight = Math.max(winHeight-200,300),
     		width = Math.min(areaWidth,areaHeight*imgData.scale),
     		height = Math.min(areaHeight,areaWidth/imgData.scale);
-console.log([width,height,imgData])
+//console.log([width,height,imgData])
     		return {
     			left:(winWidth-width)/2+100+"px",
     			top:(winHeight-height)/2+"px",
